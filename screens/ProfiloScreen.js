@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
 import Settings from './ImpostazioniScreen.js';
+import AsyncStorage from "react-native-fs-store/index";
 
 var Nome = "Manuel Marinaro";
 var Peso = 85;
