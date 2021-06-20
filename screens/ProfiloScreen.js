@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image, Button, TextInput } from 'react-native';
-import Settings from './ImpostazioniScreen';
+import Settings from './ImpostazioniScreen.js';
 
 var Nome = "Manuel Marinaro";
 var Peso = 85;

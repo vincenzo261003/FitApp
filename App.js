@@ -3,7 +3,6 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-
 import CiboScreen from './screens/CiboScreen';
 import EserciziScreen from './screens/EserciziScreen';
 import AcquaScreen from './screens/AcquaScreen';
