@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, Button, TextInput } from 'react-native';
+import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
 import Settings from './ImpostazioniScreen.js';
 
 var Nome = "Manuel Marinaro";
@@ -35,13 +35,13 @@ export default class Profilo extends React.Component {
                 <Text style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold', color: 'white' }}>{Nome}</Text>
                 <Text></Text>
                 <Text></Text>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'white' }}>       Peso: {Peso} kg</Text>
+                <Text style={styles.text}>       Peso: {Peso} kg</Text>
                 <Text></Text>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'white' }}>       Altezza: {Altezza} m</Text>
+                <Text style={styles.text}>       Altezza: {Altezza} m</Text>
                 <Text></Text>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'white' }}>       Data di nascita: {Compleanno.getDate() + "/" + (Compleanno.getMonth() + 1) + "/" + Compleanno.getFullYear()}</Text>
+                <Text style={styles.text}>       Data di nascita: {Compleanno.getDate() + "/" + (Compleanno.getMonth() + 1) + "/" + Compleanno.getFullYear()}</Text>
                 <Text></Text>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'white' }}>       Età: {Age()} anni</Text>
+                <Text style={styles.text}>       Età: {Age()} anni</Text>
                 <Text></Text>
                 <Text></Text>
                 <Text></Text>
@@ -63,3 +63,11 @@ export default class Profilo extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'white'
+    },
+});
