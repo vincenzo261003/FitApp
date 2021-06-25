@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
 import Settings from './ImpostazioniScreen.js';
-import AsyncStorage from "react-native-fs-store/index";
+//import UserData from Settings;
 
 var Nome = "Manuel Marinaro";
 var Peso = 85;
@@ -13,7 +13,7 @@ function Age() {
         one_year = 1000 * 60 * 60 * 24 * 365;
     return Math.floor((today.getTime() - Compleanno.getTime()) / one_year);
 }
-
+//sistemare layout per il mio cell con altri text ecc
 export default class Profilo extends React.Component {
     static navigationOptions = {
         title: 'Profilo'
@@ -54,7 +54,9 @@ export default class Profilo extends React.Component {
                 <Text></Text>
                 <Text></Text>
                 <Text></Text>
-                <Text></Text>
+                <View alignSelf={"center"} width={300}>
+                    <Button title={"Modifica dati"} color={"#242323"} fontWeight={"bold"} onPress={() => this.props.navigation.navigate('Settings')}></Button>
+                </View>
                 <Text></Text>
                 <Text></Text>
                 <Text></Text>
