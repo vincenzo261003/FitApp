@@ -8,8 +8,11 @@ import EserciziScreen from './screens/EserciziScreen';
 import AcquaScreen from './screens/AcquaScreen';
 import PesoScreen from './screens/PesoScreen';
 import ProfiloScreen from './screens/ProfiloScreen';
+import ImpostazioniScreen from './screens/ImpostazioniScreen';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Tab = createMaterialBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
@@ -59,8 +62,10 @@ export default function App() {
             ),
           }}
         />
-
       </Tab.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Settings" component={ImpostazioniScreen} />
+      </Stack.Navigator>
     </NavigationContainer >
   );
 }
