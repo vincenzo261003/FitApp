@@ -4,15 +4,17 @@ import Settings from './ImpostazioniScreen.js';
 //import UserData from Settings;
 
 var Nome = "Manuel Marinaro";
-var Peso = 85;
+var Peso = 84;
 var Altezza = 1.84;
 var Compleanno = new Date(2003, 9, 26);
+var BMI = Peso / (Altezza * Altezza);
 
 function Age() {
     var today = new Date(),
         one_year = 1000 * 60 * 60 * 24 * 365;
     return Math.floor((today.getTime() - Compleanno.getTime()) / one_year);
 }
+
 //sistemare layout per il mio cell con altri text ecc
 export default class Profilo extends React.Component {
     static navigationOptions = {
@@ -44,7 +46,7 @@ export default class Profilo extends React.Component {
                 <Text></Text>
                 <Text style={styles.text}>       Età: {Age()} anni</Text>
                 <Text></Text>
-                <Text></Text>
+                <Text style={styles.text}>       BMI: {BMI.toString().substring(0, 4)}</Text>
                 <Text></Text>
                 <Text></Text>
                 <Text></Text>
