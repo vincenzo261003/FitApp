@@ -4,7 +4,7 @@ import Settings from './ImpostazioniScreen.js';
 //import UserData from Settings;
 
 var Nome = "Manuel Marinaro";
-var Peso = 84;
+var Peso = 83.8;
 var Altezza = 1.84;
 var Compleanno = new Date(2003, 9, 26);
 var BMI = Peso / (Altezza * Altezza);
