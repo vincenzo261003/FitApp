@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native'
+import { Text, View, Button } from 'react-native'
 
 export default class Settings extends React.Component {
     static navigationOptions = {
@@ -8,8 +8,48 @@ export default class Settings extends React.Component {
 
     render() {
         return (
-            <View>
-                <Text>prova</Text>
+            <View style={{ backgroundColor: '#444444' }}>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <View alignSelf={"center"} width={300}>
+                    <Button title={"Torna al profilo"} color={"#242323"} fontWeight={"bold"} onPress={() => this.props.navigation.navigate('Profilo')}></Button>
+                </View>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
+                <Text></Text>
             </View>
         )
     }

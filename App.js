@@ -12,7 +12,19 @@ import ImpostazioniScreen from './screens/ImpostazioniScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 
 const Tab = createMaterialBottomTabNavigator();
-const Stack = createStackNavigator();
+const ProfiloStack = createStackNavigator();
+
+function ProfiloStackScreen() {
+  return (
+    <ProfiloStack.Navigator
+      initialRouteName="Profilo"
+      headerMode="none"
+    >
+      <ProfiloStack.Screen name="Profilo" component={ProfiloScreen} />
+      <ProfiloStack.Screen name="Impostazioni" component={ImpostazioniScreen} />
+    </ProfiloStack.Navigator>
+  );
+}
 
 export default function App() {
   return (
@@ -54,7 +66,7 @@ export default function App() {
             ),
           }}
         />
-        <Tab.Screen name="Profilo" component={ProfiloScreen}
+        <Tab.Screen name="Profilo" component={ProfiloStackScreen}
           options={{
             tabBarLabel: 'Profilo',
             tabBarIcon: ({ focused, color, size }) => (
@@ -63,9 +75,6 @@ export default function App() {
           }}
         />
       </Tab.Navigator>
-      <Stack.Navigator>
-        <Stack.Screen name="Settings" component={ImpostazioniScreen} />
-      </Stack.Navigator>
     </NavigationContainer >
   );
 }

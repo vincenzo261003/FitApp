@@ -57,7 +57,7 @@ export default class Profilo extends React.Component {
                 <Text></Text>
                 <Text></Text>
                 <View alignSelf={"center"} width={300}>
-                    <Button title={"Modifica dati"} color={"#242323"} fontWeight={"bold"} onPress={() => this.props.navigation.navigate('Settings')}></Button>
+                    <Button title={"Modifica dati"} color={"#242323"} fontWeight={"bold"} onPress={() => this.props.navigation.navigate('Impostazioni')}></Button>
                 </View>
                 <Text></Text>
                 <Text></Text>
