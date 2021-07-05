@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
-import Settings from './ImpostazioniScreen.js';
-//import UserData from Settings;
+import { db } from '../src/firebase/Firebase';
 
 var Nome = "Manuel Marinaro";
 var Peso = 83.8;
@@ -31,11 +30,11 @@ export default class Profilo extends React.Component {
                     source={{
                         uri: 'https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://lovanow.it/wp-content/uploads/2020/10/userLogo.png',
                     }}
-                    style={{ width: 150, height: 150, alignSelf: 'center', tintColor: 'white' }}
+                    style={styles.icon}
 
                 />
                 <Text></Text>
-                <Text style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold', color: 'white' }}>{Nome}</Text>
+                <Text style={styles.name}>{Nome}</Text>
                 <Text></Text>
                 <Text></Text>
                 <Text style={styles.text}>       Peso: {Peso} kg</Text>
@@ -74,5 +73,17 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'white'
+    },
+    name: {
+        alignSelf: 'center',
+        fontSize: 25,
+        fontWeight: 'bold',
+        color: 'white'
+    },
+    icon: {
+        width: 150,
+        height: 150,
+        alignSelf: 'center',
+        tintColor: 'white'
     },
 });
