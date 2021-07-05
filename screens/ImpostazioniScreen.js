@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native'
+import { Text, View, Button } from 'react-native';
+import { db } from '../src/firebase/Firebase';
 
 export default class Settings extends React.Component {
     static navigationOptions = {
