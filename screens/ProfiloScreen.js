@@ -1,9 +1,12 @@
 import React from 'react';
 import { Text, View, Image, Button, TextInput, StyleSheet } from 'react-native';
 import { db } from '../src/firebase/Firebase';
+import { collection, doc, setDoc } from "firebase";
+
+const userRef = collection(db, "MJMe56gF9XKwOFlpffK0");
 
 var Nome = "Manuel Marinaro";
-var Peso = 83.8;
+var Peso = 82.8;
 var Altezza = 1.84;
 var Compleanno = new Date(2003, 9, 26);
 var BMI = Peso / (Altezza * Altezza);
